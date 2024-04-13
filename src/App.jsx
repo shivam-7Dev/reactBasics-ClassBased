@@ -2,16 +2,26 @@ import { useState } from "react";
 import Greet from "./class-components/Greet";
 import JsxComponent from "./JsxComponent";
 import FunctionGreet from "./functional-componets/FunctionGreet";
+import Message from "./class-components/Message";
+import Counter from "./class-components/Counter";
+import FuctionClick from "./functional-componets/FuctionClick";
+import ClassClick from "./class-components/ClassClick";
+import EventBind from "./class-components/EventBind";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
   return (
     <>
-      <FunctionGreet name="Shivam" heroName="Shady">
+      {/* <FunctionGreet name="Shivam" heroName="Shady">
         <h5>children prop for functional comaponet</h5>
       </FunctionGreet>
       <Greet name=" class component" heroName="className" />
-      <JsxComponent />
+      <JsxComponent /> */}
+      {/* <Message /> */}
+      {/* <Counter /> */}
+      {/* <FuctionClick /> */}
+      {/* <ClassClick /> */}
+      <EventBind />
     </>
   );
 }
