@@ -8,6 +8,7 @@ import FuctionClick from "./functional-componets/FuctionClick";
 import ClassClick from "./class-components/ClassClick";
 import EventBind from "./class-components/EventBind";
 import List from "./class-components/List";
+import Form from "./class-components/Form";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -23,7 +24,8 @@ function App() {
       {/* <FuctionClick /> */}
       {/* <ClassClick /> */}
       {/* <EventBind /> */}
-      <List />
+      {/* <List /> */}
+      <Form />
     </>
   );
 }
