@@ -9,6 +9,8 @@ import ClassClick from "./class-components/ClassClick";
 import EventBind from "./class-components/EventBind";
 import List from "./class-components/List";
 import Form from "./class-components/Form";
+import MountiongPhase from "../Lifecycle-Methods/MountiongPhase";
+import UpdatingPhase from "../Lifecycle-Methods/UpdatingPhase";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -25,7 +27,9 @@ function App() {
       {/* <ClassClick /> */}
       {/* <EventBind /> */}
       {/* <List /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <MountiongPhase /> */}
+      <UpdatingPhase />
     </>
   );
 }
@@ -56,7 +60,7 @@ export default App;
 
   1. Lists
   2. Form Handling
-  3.Life cycle methods
+  3.Life cycle methods 4 phases (Mounting, Updating, Unmounting, Error Handling)
   4.Fragments
   5.Pure component
   6.memo
