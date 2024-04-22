@@ -14,6 +14,8 @@ import UpdatingPhase from "../Lifecycle-Methods/UpdatingPhase";
 import Frangmeant from "./functional-componets/Frangmeant";
 import ParentComponent from "./class-components/ParentComponent";
 import FunctionalParent from "./functional-componets/FunctionalParent";
+import RefsDemo from "./class-components/RefsDemo";
+import ForwardRefParent from "./class-components/ForwardRefParent";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -35,7 +37,9 @@ function App() {
       {/* <UpdatingPhase /> */}
       {/* <Frangmeant /> */}
       {/* <ParentComponent /> */}
-      <FunctionalParent />
+      {/* <FunctionalParent /> */}
+      {/* <RefsDemo /> */}
+      <ForwardRefParent />
     </>
   );
 }
