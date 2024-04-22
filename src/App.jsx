@@ -12,6 +12,8 @@ import Form from "./class-components/Form";
 import MountiongPhase from "../Lifecycle-Methods/MountiongPhase";
 import UpdatingPhase from "../Lifecycle-Methods/UpdatingPhase";
 import Frangmeant from "./functional-componets/Frangmeant";
+import ParentComponent from "./class-components/ParentComponent";
+import FunctionalParent from "./functional-componets/FunctionalParent";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -31,7 +33,9 @@ function App() {
       {/* <Form /> */}
       {/* <MountiongPhase /> */}
       {/* <UpdatingPhase /> */}
-      <Frangmeant />
+      {/* <Frangmeant /> */}
+      {/* <ParentComponent /> */}
+      <FunctionalParent />
     </>
   );
 }
@@ -65,8 +69,8 @@ export default App;
   3.Life cycle methods 4 phases (Mounting, Updating, Unmounting, Error Handling)
   4.Fragments
   advance React
-  5.Pure component
-  6.memo
+  5.Pure component => Pure Component is a class component that extends the React.PureComponent=> class Counter extends PureComponent
+  6.memo => what React.PureComponent is to class blased component React.memo is to functional component
   7.refs
   8.Forwrdings refs
   9.Portals
