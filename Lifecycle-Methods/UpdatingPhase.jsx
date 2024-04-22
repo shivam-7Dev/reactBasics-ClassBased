@@ -45,7 +45,11 @@ export default class UpdatingPhase extends Component {
     //MountiongPhase.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.
     //called for every rerender of componet
     // should be used when state depends on Props
+    //return null or and object that represents the updated state of the component
+    //This component is called every time component is re rendered
+    //This methods is used when the state is dependent on the props
     console.log("getDerivedStateFromProps Parent");
+
     return null;
   }
 
@@ -56,18 +60,23 @@ export default class UpdatingPhase extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     //You can compare the new state and previous state and return true or false to stop rerendering of the component
+    //it dictates if the components should re render or not
     console.log("shouldComponentUpdate Parent");
     return true;
   }
 
   getSnapshotBeforeUpdate() {
+    //this method either returns null or a value and that value is passed as the third parameter to the next method
     console.log("getSnapshotBeforeUpdate parent");
+
     return null;
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    //THis method will be calle after the render is finished in the rerender cycles
     console.log("componentDidUpdate Parent");
   }
+
   handleUpdate = () => {
     this.setState({
       name: "shivam",
