@@ -17,6 +17,8 @@ import FunctionalParent from "./functional-componets/FunctionalParent";
 import RefsDemo from "./class-components/RefsDemo";
 import ForwardRefParent from "./class-components/ForwardRefParent";
 import PortalComp from "./functional-componets/PortalComp";
+import Hero from "./class-components/Hero";
+import ErrorBoundary from "./class-components/ErrorBoundary";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -41,7 +43,13 @@ function App() {
       {/* <FunctionalParent /> */}
       {/* <RefsDemo /> */}
       {/* <ForwardRefParent /> */}
-      <PortalComp />
+      {/* <PortalComp /> */}
+      <ErrorBoundary>
+        <Hero heroName={"Batman"} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName={"Joker"} />
+      </ErrorBoundary>
     </>
   );
 }
