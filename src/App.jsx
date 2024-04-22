@@ -7,6 +7,7 @@ import Counter from "./class-components/Counter";
 import FuctionClick from "./functional-componets/FuctionClick";
 import ClassClick from "./class-components/ClassClick";
 import EventBind from "./class-components/EventBind";
+import List from "./class-components/List";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -21,7 +22,8 @@ function App() {
       {/* <Counter /> */}
       {/* <FuctionClick /> */}
       {/* <ClassClick /> */}
-      <EventBind />
+      {/* <EventBind /> */}
+      <List />
     </>
   );
 }
@@ -38,7 +40,6 @@ export default App;
  * such as when it is mounted, updated, or unmounted.
  *
  * To create a functional component in React, you can define a JavaScript function that returns JSX (JavaScript XML) code.
- * Functional components are simpler and easier to write, as they don't have their own state or lifecycle methods.
  *
  * To create a class component in React, you can define a JavaScript class that extends the React.Component class.
  *  Class components have their own state
@@ -46,4 +47,24 @@ export default App;
  *
  * Both functional and class components can receive props (properties) as input,
  * which allow them to customize their behavior and appearance based on the data passed to them.
+ */
+
+/**
+ * Most Important points to cover
+
+  1. Lists
+  2. Form Handling
+  3.Life cycle methods
+  4.Fragments
+  5.Pure component
+  6.memo
+  7.refs
+  8.Forwrdings refs
+  9.Portals
+  10.Error Boundaries
+  11. Higher Order Componets
+  12.Render Props
+  13. Context
+  14.Http
+  
  */
