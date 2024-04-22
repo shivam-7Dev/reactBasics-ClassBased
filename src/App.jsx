@@ -16,6 +16,7 @@ import ParentComponent from "./class-components/ParentComponent";
 import FunctionalParent from "./functional-componets/FunctionalParent";
 import RefsDemo from "./class-components/RefsDemo";
 import ForwardRefParent from "./class-components/ForwardRefParent";
+import PortalComp from "./functional-componets/PortalComp";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -39,7 +40,8 @@ function App() {
       {/* <ParentComponent /> */}
       {/* <FunctionalParent /> */}
       {/* <RefsDemo /> */}
-      <ForwardRefParent />
+      {/* <ForwardRefParent /> */}
+      <PortalComp />
     </>
   );
 }
