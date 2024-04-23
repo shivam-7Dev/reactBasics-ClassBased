@@ -26,6 +26,7 @@ import HoverCounterTwo from "./class-components/HoverCounterTwo";
 import RenderPropsDemo from "./class-components/RenderPropsDemo";
 import ComponentA from "./class-components/ComponentA";
 import { UserProvider } from "../userContext";
+import PostList from "./class-components/PostList";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -86,9 +87,10 @@ function App() {
           return <h1>This is test component</h1>;
         }}
       </RenderPropsDemo> */}
-      <UserProvider value={"shivam"}>
+      {/* <UserProvider value={"shivam"}>
         <ComponentA />
-      </UserProvider>{" "}
+      </UserProvider> */}
+      <PostList />
     </>
   );
 }
