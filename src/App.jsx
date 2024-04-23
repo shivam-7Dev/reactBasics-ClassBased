@@ -19,6 +19,8 @@ import ForwardRefParent from "./class-components/ForwardRefParent";
 import PortalComp from "./functional-componets/PortalComp";
 import Hero from "./class-components/Hero";
 import ErrorBoundary from "./class-components/ErrorBoundary";
+import ClickCounter from "./class-components/ClickCounter";
+import HoverCounter from "./class-components/HoverCounter";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -44,12 +46,14 @@ function App() {
       {/* <RefsDemo /> */}
       {/* <ForwardRefParent /> */}
       {/* <PortalComp /> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Hero heroName={"Batman"} />
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero heroName={"Joker"} />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+      <ClickCounter type="Click Type" />
+      <HoverCounter type="Hover Type" />
     </>
   );
 }
