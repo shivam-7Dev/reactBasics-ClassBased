@@ -21,6 +21,9 @@ import Hero from "./class-components/Hero";
 import ErrorBoundary from "./class-components/ErrorBoundary";
 import ClickCounter from "./class-components/ClickCounter";
 import HoverCounter from "./class-components/HoverCounter";
+import ClickCounterTwo from "./class-components/ClickCounterTwo";
+import HoverCounterTwo from "./class-components/HoverCounterTwo";
+import RenderPropsDemo from "./class-components/RenderPropsDemo";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -48,12 +51,41 @@ function App() {
       {/* <PortalComp /> */}
       {/* <ErrorBoundary>
         <Hero heroName={"Batman"} />
-      </ErrorBoundary>
-      <ErrorBoundary>
+      </ErrorBoundary> */}
+      {/* <ErrorBoundary>
         <Hero heroName={"Joker"} />
       </ErrorBoundary> */}
-      <ClickCounter type="Click Type" />
-      <HoverCounter type="Hover Type" />
+      {/* <ClickCounter type="Click Type" /> */}
+      {/* <HoverCounter type="Hover Type" /> */}
+
+      {/* <RenderPropsDemo
+        render={() => {
+          return <h1>This is test component</h1>;
+        }}
+      /> */}
+
+      {/* <RenderPropsDemo
+        render={(count, handleIncrementCount) => (
+          <HoverCounterTwo
+            count={count}
+            handleIncrementCount={handleIncrementCount}
+          />
+        )}
+      /> */}
+      {/* <RenderPropsDemo
+        render={(count, handleIncrementCount) => (
+          <ClickCounterTwo
+            count={count}
+            handleIncrementCount={handleIncrementCount}
+          />
+        )}
+      /> */}
+      {/* <RenderPropsDemo>
+        {() => {
+          //passing a function  as a children which returns JSX
+          return <h1>This is test component</h1>;
+        }}
+      </RenderPropsDemo> */}
     </>
   );
 }
@@ -93,8 +125,8 @@ export default App;
   8.Forwrdings refs
   9.Portals
   10.Error Boundaries
-  11. Higher Order Componets
-  12.Render Props
+  11. Higher Order Componets => Pattern to share common functionality
+  12.Render Props  => Patter to share common functionality
   13. Context
   14.Http
   
