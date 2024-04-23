@@ -24,6 +24,8 @@ import HoverCounter from "./class-components/HoverCounter";
 import ClickCounterTwo from "./class-components/ClickCounterTwo";
 import HoverCounterTwo from "./class-components/HoverCounterTwo";
 import RenderPropsDemo from "./class-components/RenderPropsDemo";
+import ComponentA from "./class-components/ComponentA";
+import { UserProvider } from "../userContext";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -57,13 +59,11 @@ function App() {
       </ErrorBoundary> */}
       {/* <ClickCounter type="Click Type" /> */}
       {/* <HoverCounter type="Hover Type" /> */}
-
       {/* <RenderPropsDemo
         render={() => {
           return <h1>This is test component</h1>;
         }}
       /> */}
-
       {/* <RenderPropsDemo
         render={(count, handleIncrementCount) => (
           <HoverCounterTwo
@@ -86,6 +86,9 @@ function App() {
           return <h1>This is test component</h1>;
         }}
       </RenderPropsDemo> */}
+      <UserProvider value={"shivam"}>
+        <ComponentA />
+      </UserProvider>{" "}
     </>
   );
 }
@@ -127,7 +130,7 @@ export default App;
   10.Error Boundaries
   11. Higher Order Componets => Pattern to share common functionality
   12.Render Props  => Patter to share common functionality
-  13. Context
+  13. Context => Context provides a way to pass data throung the component tree without having to pass props down manually at every level
   14.Http
   
  */
