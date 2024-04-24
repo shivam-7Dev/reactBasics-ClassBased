@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import Hookcounter from "./useState/Hookcounter";
 import ObjectDemo from "./useState/ObjectDemo";
 import ListStateDemo from "./useState/ListStateDemo";
@@ -8,36 +8,87 @@ import AutomaticCounter from "./useEffect/AutomaticCounter";
 import WindowWidth from "./useEffect/WindowWidth";
 import DataFetching from "./useEffect/DataFetching";
 import FetchingIndividualItem from "./useEffect/FetchingIndividualItem";
-import ContextConsumer from "./useEffect/ContextConsumer";
+import ContextConsumer from "./useContext/ContextConsumer";
+import UseReducerCounter from "./useReducer/UseReducerCounter";
+import Form from "./useReducer/Form";
+import ConsumerTwo from "./ConsumerTwo";
 
 const userContext = React.createContext();
 const idContext = React.createContext();
 
+const globalValue = React.createContext();
+const intialData = {
+  loading: true,
+  data: {},
+  error: "",
+};
+const reducer = (state, action) => {
+  const { value } = action;
+  switch (action.type) {
+    case "setData":
+      return {
+        ...state,
+        data: value,
+        error: false,
+        loading: false,
+      };
+    case "setError":
+      return state;
+    default:
+      return intialData;
+  }
+};
+
 const HookDemo = () => {
+  const [data, dispatch] = useReducer(reducer, intialData);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => response.json())
+      .then((json) => {
+        dispatch({
+          type: "setData",
+          value: json,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    return () => {
+      console.log("cleanup");
+    };
+  }, []);
+
   return (
-    <div>
-      <h1>This is parent of hook component</h1>
-      <hr />
-      <hr />
-      {/* <Hookcounter /> */}
-      {/* <ObjectDemo /> */}
-      {/* <ListStateDemo /> */}
-      {/* <HookCounterOne /> */}
-      {/* <HookMouse /> */}
-      {/* <AutomaticCounter /> */}
-      {/* <WindowWidth /> */}
-      {/* <DataFetching /> */}
-      {/* <FetchingIndividualItem  /> */}
-      <userContext.Provider value="shivam">
+    <globalValue.Provider value={{ data, dispatch }}>
+      <div>
+        <h1>This is parent of hook component</h1>
+        <hr />
+        <hr />
+        {/* <Hookcounter /> */}
+        {/* <ObjectDemo /> */}
+        {/* <ListStateDemo /> */}
+        {/* <HookCounterOne /> */}
+        {/* <HookMouse /> */}
+        {/* <AutomaticCounter /> */}
+        {/* <WindowWidth /> */}
+        {/* <DataFetching /> */}
+        {/* <FetchingIndividualItem  /> */}
+        {/* <userContext.Provider value="shivam">
         <idContext.Provider value="007">
           <ContextConsumer />
         </idContext.Provider>
-      </userContext.Provider>
-    </div>
+      </userContext.Provider> */}
+        {/* <UseReducerCounter /> */}
+        {/* <Form /> */}
+        <ConsumerTwo />
+      </div>
+    </globalValue.Provider>
   );
 };
 
-export { userContext, idContext };
+export { userContext, idContext, globalValue };
 export default HookDemo;
 
 /**
