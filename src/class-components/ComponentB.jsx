@@ -24,4 +24,4 @@ export default class ComponentB extends Component {
   }
 }
 
-ComponentB.contextType = userContext;
+ComponentB.contextType = { userContext };

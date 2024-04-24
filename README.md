@@ -1,6 +1,6 @@
 # React with class component
 
-This repository covers the fundamentals of React class components along with advanced topics including:
+This repository covers the fundamentals of React class components and functional componets along with advanced topics including:
 
 > Pure components
 
@@ -19,3 +19,5 @@ This repository covers the fundamentals of React class components along with adv
 > Render Props
 
 > Context
+
+> React Hooks

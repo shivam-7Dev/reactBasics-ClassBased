@@ -27,6 +27,7 @@ import RenderPropsDemo from "./class-components/RenderPropsDemo";
 import ComponentA from "./class-components/ComponentA";
 import { UserProvider } from "../userContext";
 import PostList from "./class-components/PostList";
+import HookDemo from "./functional-componets/HookDemo";
 
 function App() {
   //note=> props are immutable that is you can not change the value of props
@@ -90,7 +91,8 @@ function App() {
       {/* <UserProvider value={"shivam"}>
         <ComponentA />
       </UserProvider> */}
-      <PostList />
+      {/* <PostList /> */}
+      <HookDemo />
     </>
   );
 }
