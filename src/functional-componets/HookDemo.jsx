@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import Hookcounter from "./useState/Hookcounter";
 import ObjectDemo from "./useState/ObjectDemo";
 import ListStateDemo from "./useState/ListStateDemo";
@@ -8,6 +8,10 @@ import AutomaticCounter from "./useEffect/AutomaticCounter";
 import WindowWidth from "./useEffect/WindowWidth";
 import DataFetching from "./useEffect/DataFetching";
 import FetchingIndividualItem from "./useEffect/FetchingIndividualItem";
+import ContextConsumer from "./useEffect/ContextConsumer";
+
+const userContext = React.createContext();
+const idContext = React.createContext();
 
 const HookDemo = () => {
   return (
@@ -23,11 +27,17 @@ const HookDemo = () => {
       {/* <AutomaticCounter /> */}
       {/* <WindowWidth /> */}
       {/* <DataFetching /> */}
-      <FetchingIndividualItem />
+      {/* <FetchingIndividualItem  /> */}
+      <userContext.Provider value="shivam">
+        <idContext.Provider value="007">
+          <ContextConsumer />
+        </idContext.Provider>
+      </userContext.Provider>
     </div>
   );
 };
 
+export { userContext, idContext };
 export default HookDemo;
 
 /**
