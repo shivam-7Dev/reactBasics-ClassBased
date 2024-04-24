@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import Hookcounter from "./useState/Hookcounter";
 import ObjectDemo from "./useState/ObjectDemo";
 import ListStateDemo from "./useState/ListStateDemo";
@@ -12,6 +12,7 @@ import ContextConsumer from "./useContext/ContextConsumer";
 import UseReducerCounter from "./useReducer/UseReducerCounter";
 import Form from "./useReducer/Form";
 import ConsumerTwo from "./ConsumerTwo";
+import UseCallbackDemo from "./useCallback/UseCallbackDemo";
 
 const userContext = React.createContext();
 const idContext = React.createContext();
@@ -61,30 +62,31 @@ const HookDemo = () => {
   }, []);
 
   return (
-    <globalValue.Provider value={{ data, dispatch }}>
-      <div>
-        <h1>This is parent of hook component</h1>
-        <hr />
-        <hr />
-        {/* <Hookcounter /> */}
-        {/* <ObjectDemo /> */}
-        {/* <ListStateDemo /> */}
-        {/* <HookCounterOne /> */}
-        {/* <HookMouse /> */}
-        {/* <AutomaticCounter /> */}
-        {/* <WindowWidth /> */}
-        {/* <DataFetching /> */}
-        {/* <FetchingIndividualItem  /> */}
-        {/* <userContext.Provider value="shivam">
-        <idContext.Provider value="007">
-          <ContextConsumer />
-        </idContext.Provider>
-      </userContext.Provider> */}
-        {/* <UseReducerCounter /> */}
-        {/* <Form /> */}
-        <ConsumerTwo />
-      </div>
-    </globalValue.Provider>
+    <userContext.Provider value="shivam">
+      <globalValue.Provider value={{ data, dispatch }}>
+        <div>
+          <h1>This is parent of hook component</h1>
+          <hr />
+          <hr />
+          {/* <Hookcounter /> */}
+          {/* <ObjectDemo /> */}
+          {/* <ListStateDemo /> */}
+          {/* <HookCounterOne /> */}
+          {/* <HookMouse /> */}
+          {/* <AutomaticCounter /> */}
+          {/* <WindowWidth /> */}
+          {/* <DataFetching /> */}
+          {/* <FetchingIndividualItem  /> */}
+          {/* <idContext.Provider value="007">
+            <ContextConsumer />
+          </idContext.Provider> */}
+          {/* <UseReducerCounter /> */}
+          {/* <Form /> */}
+          {/* <ConsumerTwo /> */}
+          <UseCallbackDemo />
+        </div>
+      </globalValue.Provider>
+    </userContext.Provider>
   );
 };
 
