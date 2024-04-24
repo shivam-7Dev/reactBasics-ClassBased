@@ -14,6 +14,7 @@ import Form from "./useReducer/Form";
 import ConsumerTwo from "./ConsumerTwo";
 import UseCallbackDemo from "./useCallback/UseCallbackDemo";
 import UseMemoDemo from "./useMemo/UseMemoDemo";
+import UseRef from "./useRef/UseRef";
 
 const userContext = React.createContext();
 const idContext = React.createContext();
@@ -85,7 +86,8 @@ const HookDemo = () => {
           {/* <Form /> */}
           {/* <ConsumerTwo /> */}
           {/* <UseCallbackDemo /> */}
-          <UseMemoDemo />
+          {/* <UseMemoDemo /> */}
+          <UseRef />
         </div>
       </globalValue.Provider>
     </userContext.Provider>
