@@ -1,7 +1,13 @@
 import React from "react";
-import Hookcounter from "./Hookcounter";
-import ObjectDemo from "./ObjectDemo";
-import ListStateDemo from "./ListStateDemo";
+import Hookcounter from "./useState/Hookcounter";
+import ObjectDemo from "./useState/ObjectDemo";
+import ListStateDemo from "./useState/ListStateDemo";
+import HookCounterOne from "./useEffect/HookCounterOne";
+import HookMouse from "./useEffect/HookMouse";
+import AutomaticCounter from "./useEffect/AutomaticCounter";
+import WindowWidth from "./useEffect/WindowWidth";
+import DataFetching from "./useEffect/DataFetching";
+import FetchingIndividualItem from "./useEffect/FetchingIndividualItem";
 
 const HookDemo = () => {
   return (
@@ -11,7 +17,13 @@ const HookDemo = () => {
       <hr />
       {/* <Hookcounter /> */}
       {/* <ObjectDemo /> */}
-      <ListStateDemo />
+      {/* <ListStateDemo /> */}
+      {/* <HookCounterOne /> */}
+      {/* <HookMouse /> */}
+      {/* <AutomaticCounter /> */}
+      {/* <WindowWidth /> */}
+      {/* <DataFetching /> */}
+      <FetchingIndividualItem />
     </div>
   );
 };
